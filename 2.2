@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int year = Convert.ToInt32(textBox1.Text);
+            year %= 12;
+            year++;
+            switch (year)
+            {
+                case 1: textBox2.Text = Convert.ToString("Обезьяна"); break;
+                case 2: textBox2.Text = Convert.ToString("Петух"); break;
+                case 3: textBox2.Text = Convert.ToString("Собака"); break;
+                case 4: textBox2.Text = Convert.ToString("Кабан"); break;
+                case 5: textBox2.Text = Convert.ToString("Крыса"); break;
+                case 6: textBox2.Text = Convert.ToString("Бык"); break;
+                case 7: textBox2.Text = Convert.ToString("Тигр"); break;
+                case 8: textBox2.Text = Convert.ToString("Кролик"); break;
+                case 9: textBox2.Text = Convert.ToString("Дракон"); break;
+                case 10: textBox2.Text = Convert.ToString("Змея"); break;
+                case 11: textBox2.Text = Convert.ToString("Лошадь"); break;
+                case 12: textBox2.Text = Convert.ToString("Овца"); break;
+                default:
+                    textBox2.Text = Convert.ToString("ВЫ ОШИБЛИСЬ"); break;
+            }
+        }
+    }
+}
